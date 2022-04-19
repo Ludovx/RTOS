@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 263.68,
+      "left": 152.49,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -164,
+      "left": 155.74,
+      "rotate": 90,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -163.6,
+      "left": 219.43,
+      "rotate": 270,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -62.73,
+      "left": 92.44,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -38.96,
+      "left": 92.84,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "mega:GND.3", "black", [ "v-56.3", "h-15.15" ] ],
+    [ "pot1:VCC", "mega:5V", "red", [ "v-41.51", "h-15.13" ] ],
+    [ "pot1:SIG", "mega:A0", "green", [ "v-34.47", "h-1.04" ] ],
+    [ "btn1:2.r", "mega:5V", "green", [ "v25.15", "h-250.16", "v319.41", "h235.66", "v-5.84" ] ],
+    [ "btn2:1.l", "mega:5V", "green", [ "v34.96", "h-299.61", "v298.96", "h225.92" ] ],
+    [ "btn1:1.r", "mega:3", "green", [ "v96.23", "h2.32" ] ],
+    [ "btn2:2.l", "mega:2", "green", [ "v95.33", "h-2.33" ] ],
+    [ "btn2:2.l", "r2:2", "green", [ "v0" ] ],
+    [ "btn1:1.r", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "mega:GND.2", "green", [ "v1.06", "h-142.43", "v267.8", "h233.71" ] ],
+    [ "r2:1", "mega:GND.2", "green", [ "v0.67", "h-131.15", "v234.69", "h212.29" ] ]
+  ]
+}
